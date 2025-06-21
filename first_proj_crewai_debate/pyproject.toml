@@ -1,0 +1,23 @@
+[project]
+name = "first_proj_crewai_debate"
+version = "0.1.0"
+description = "first-proj-crewai-debate using crewAI"
+authors = [{ name = "Pdhote05", email = "pdhote05@gmail.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.130.0,<1.0.0"
+]
+
+[project.scripts]
+first_proj_crewai_debate = "first_proj_crewai_debate.main:run"
+run_crew = "first_proj_crewai_debate.main:run"
+train = "first_proj_crewai_debate.main:train"
+replay = "first_proj_crewai_debate.main:replay"
+test = "first_proj_crewai_debate.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
